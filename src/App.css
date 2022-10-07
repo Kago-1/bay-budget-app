@@ -9,7 +9,7 @@ min-height: 100vh;
 
 .navbar {
   font-style: italic;
-  padding: 40px 600px 30px 500px;
+  padding: 40px 600px 50px 500px;
 }
 
 .navbar a:hover {
@@ -44,4 +44,7 @@ h3{
 
 .clear{
   padding-top: 10px;
+}
+.btn-done{
+background-color: lightblue;
 }
