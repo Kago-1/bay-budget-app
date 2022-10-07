@@ -1,17 +1,19 @@
 import React,{useEffect,useState} from 'react'
 import "bootstrap/dist/css/bootstrap.min.css"
 import Expense from './Expense'
+import Search from './Search';
 
 function Expenses() {
   const [expenses,setExpenses] = useState([]);
+  const[searchInput, setSearchInput]=useState([]);
 
-  function getExpense(){
+  function getExpense(data){
     fetch(`https://budget-bac.herokuapp.com/expenses`)
     .then(res=>res.json())
     .then(data=> setExpenses(data))
   }
   
-  useEffect(getExpense,[]);
+  // useEffect(getExpense,[]);
 
 
   function deleteExpense (id){ 
@@ -20,8 +22,25 @@ function Expenses() {
      getExpense();
  }
 
+useEffect(() => {
+  if (searchInput.length > 0){
+    setExpenses(prevItems => prevItems.filter((expense) => expense.item.toLowerCase().includes(searchInput.toLowerCase())));
+  } else {
+    getExpense()
+  } 
+},[searchInput])
+
+const handleSearch = (event) => {
+  setSearchInput(event.target.value);
+}
+
+
   return ( 
-   <div className='table'>
+  <div>
+    <div>
+      <Search handleSearch={handleSearch}/>
+    </div>
+     <div className='table'>
     <table className="table table-dark">
   <thead>
     <tr>
@@ -41,6 +60,7 @@ function Expenses() {
   </tbody>
   </table>
    </div>
+  </div>
   );
 }
 
