@@ -32,14 +32,14 @@ import React, {useState} from 'react';
 
   return (
     <div>
-      <h2>Add a new item :</h2>
+      <h2>Add expense :</h2>
     <form className="form" onSubmit={addExpense} >
         <div>
         <input type="text" placeholder="Item" value={item} onChange={(e)=>setItem(e.target.value)} />
         <input type="text" placeholder="Category" value={category} onChange={(e)=>setCategory(e.target.value)} />
         <input type="number" placeholder="Cost" step="$10" value={cost} onChange={(e)=>setCost(e.target.value)} />
       </div>
-      <button className="button" type="submit" > Add Item </button>
+      <button className="button" type="submit" > Add Expense </button>
     </form>
   </div>
   )
