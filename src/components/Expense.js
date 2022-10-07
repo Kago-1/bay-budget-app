@@ -7,7 +7,7 @@ function Expense({data,deleteExpense}) {
     <td>{data.item}</td>
     <td>{data.category}</td>
     <td>{data.cost}</td>
-    <td><button className='btn-done' onClick={()=>deleteExpense(data.id)}>Mark done</button></td>
+    <td><button className='btn-done' onClick={()=>deleteExpense(data.id)}>Delete expense</button></td>
     </tr>
   )
 }
