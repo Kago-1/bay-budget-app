@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import NavBar from "./components/NavBar";
+import { Routes, Route } from "react-router-dom";
+import Expenses from "./components/Expenses";
+import Blog from "./components/Blog";
+import NewExpense from "./components/NewExpense";
+import"./App.css"
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h1>Bay Budget app</h1>
+    <NavBar />
+  <Routes>
+    <Route path="/" element={<Expenses />} />
+    <Route path="/newexpense" element={<NewExpense />} />
+    <Route path="/blog" element={<Blog />} />
+  </Routes>
+    
     </div>
   );
 }
