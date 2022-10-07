@@ -17,8 +17,8 @@ import React, {useState} from 'react';
    post(data)
  
   setItem("")
-  setCategory(" ")
-  setCost(" ")
+  setCategory("")
+  setCost('')
   }
 
   function post (obj){
@@ -37,7 +37,7 @@ import React, {useState} from 'react';
         <div>
         <input type="text" placeholder="Item" value={item} onChange={(e)=>setItem(e.target.value)} />
         <input type="text" placeholder="Category" value={category} onChange={(e)=>setCategory(e.target.value)} />
-        <input type="number" placeholder="Cost" step="$10" value={cost} onChange={(e)=>setCost(e.target.value)} />
+        <input type="number" placeholder="Cost" value={cost} onChange={(e)=>setCost(e.target.value)} />
       </div>
       <button className="button" type="submit" > Add Expense </button>
     </form>
