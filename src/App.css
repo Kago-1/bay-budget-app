@@ -9,7 +9,7 @@ min-height: 100vh;
 
 .navbar {
   font-style: italic;
-  padding: 40px 600px 10px 500px;
+  padding: 40px 600px 30px 500px;
 }
 
 .navbar a:hover {
@@ -36,7 +36,6 @@ input {
   padding: 80px;
   padding-left: 300px;
   padding-right: 300px;
-  margin: 0px 0px 0px 0px;
   }
 
 h3{
