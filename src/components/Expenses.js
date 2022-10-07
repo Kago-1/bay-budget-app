@@ -7,7 +7,7 @@ function Expenses() {
   const [expenses,setExpenses] = useState([]);
   const[searchInput, setSearchInput]=useState([]);
 
-  function getExpense(data){
+  function getExpense(){
     fetch(`https://budget-bac.herokuapp.com/expenses`)
     .then(res=>res.json())
     .then(data=> setExpenses(data))
