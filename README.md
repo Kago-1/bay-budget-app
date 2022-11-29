@@ -18,7 +18,7 @@ The technologies used to develop Baybudget app are;
 * json-server for backend
 
 ## Set up
-1. Clone this repository
+1. Fork and clone this repository
 2. Run React
 
 ```react js
